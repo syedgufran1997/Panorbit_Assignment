@@ -9,10 +9,10 @@ const MyAccount = () => {
             <div className={myaccountstyles.wrapper}>
                 <div className={myaccountstyles.sidebarWrap}>
                     <div className={myaccountstyles.sideContentWrap}>
-                    <h4>Profile</h4>
-                    <h4>Posts</h4>
-                    <h4>Gallery</h4>
-                    <h4>ToDo</h4>
+                        <h4>Profile</h4>
+                        <h4>Posts</h4>
+                        <h4>Gallery</h4>
+                        <h4>ToDo</h4>
                     </div>
                 </div>
                 <div className={myaccountstyles.contentwrap}>
