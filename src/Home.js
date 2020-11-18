@@ -6,7 +6,6 @@ import MyAccount from "./components/MyAccount/MyAccount"
 export const Home = () => {
     return (
         <div>
-
             <AccountHome />
             <MyAccount />            
         </div>

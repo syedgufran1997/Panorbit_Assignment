@@ -1,11 +1,16 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
 .wrapper {
   display: flex;
-  width: 93%;
-  height: 88vh;
-  margin: 6vh auto;
+  width: 100%;
+  height: 98.4vh;
+  padding: 2.5em 2.8em;
 }
 .sidebarWrap {
-  width: 21%;
+  width: 18.8%;
   background: rgb(114, 64, 200);
   border-radius: 25px;
   background: linear-gradient(
@@ -19,29 +24,151 @@
 }
 .sidebarWrap h4 {
   cursor: pointer;
-  color: white;
+  color: lightgrey;
   margin: 0em 2.5em;
   padding: 1em 0;
   border-bottom: 1px solid lightgrey;
 }
 .sidebarWrap h4:hover {
-  color: lightgrey;
+  color: white;
+  border-bottom: 1px solid white;
 }
 .contentwrap {
-  width: 89%;
-  border: 1px solid lightgrey;
+  width: 81%;
+  padding: 1.2em 0 1em 3.1em;
+  letter-spacing: 1px;
 }
 .headingWrap {
-  border: 1px solid lightgrey;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.8em;
+  border-bottom: 1px solid lightgrey;
 }
-
+.headingWrap h3 {
+  letter-spacing: 1px;
+  font-size: 1.2em;
+}
+.namewrap {
+  display: flex;
+  margin-top: -0.4em;
+}
+.namewrap img {
+  width: 33px;
+  height: 33px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+.namewrap h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1em;
+  margin-left: 0.7em;
+}
 .profile_address_wrapper {
   display: flex;
-  border: 1px solid lightgrey;
+  justify-content: space-between;
+  padding: 2.3em 0em 0 0;
+  width: 100%;
 }
 .leftProfile {
-  border: 1px solid lightgrey;
+  width: 30%;
 }
+.picwrap {
+  text-align: center;
+}
+.profilewrap img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-position: center;
+  object-fit: cover;
+}
+.profilewrap h3 {
+  margin-top: 0.3em;
+}
+.detailswrap {
+  display: flex;
+  /* justify-content: center; */
+  width: 100%;
+  padding: 0.4em 0em 0.5em 0;
+
+  border-bottom: 1px solid lightgrey;
+}
+.headname {
+  width: 41%;
+  text-align: right;
+  color: grey;
+}
+.headname h3 {
+  margin-bottom: 0.86em;
+}
+.names {
+  text-align: left;
+  width: 59%;
+}
+.names h3 {
+  margin-bottom: 0.86em;
+  margin-left: 0.6em;
+}
+.companyname h3 {
+  margin: 0.5em 0;
+  text-align: center;
+}
+.companywrap {
+  display: flex;
+}
+
 .rightAddress {
-  border: 1px solid lightgrey;
+  border-left: 1px solid lightgrey;
+  margin-left: 5%;
+  padding-left: 3.6em;
+  width: 65%;
+}
+.addressheading h3 {
+  color: grey;
+}
+.addresswrap {
+  display: flex;
+  margin: 0.5em auto;
+}
+.address {
+  padding-left: 1.6em;
+}
+.addressname h3 {
+  text-align: right;
+  color: grey;
+  margin: 0.6em 0;
+}
+.addressdetails {
+  text-align: left;
+}
+.addressdetails h3 {
+  margin: 0.6em 0 0.6em 1em;
+}
+.location {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 97%;
+  margin-top: 0.5em;
+  letter-spacing: 0.5px;
+}
+.lat,
+.long {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 18%;
+}
+.lat h5,
+.long h5 {
+  color: grey;
+  font-size: 0.7em;
+}
+.lat p,
+.long p {
+  font-size: 0.8em;
+  margin-left: 0.5em;
 }
