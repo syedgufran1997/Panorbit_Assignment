@@ -1,26 +1,43 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import myaccountstyles from  "./myaccountstyles.module.css"
 import Map from "../../assets/Images/map.png"
 
-const MyAccount = () => {
+const MyAccount = (props) => {
+
+    const [data, setData] = useState([]);
+
+
+    useEffect(() => {
+
+        fetch(`https://panorbit.in/api/users.json`,)
+        .then(res => res.json())
+        .then(data => {
+                setData(data.users)
+            })
+            .catch(error => console.log(error))
+    }, [])
+
+    // const {match : {params} } = props
+
 
     return (
         <>
-            <div className={myaccountstyles.wrapper}>
+            {console.log("data :-",data)}
+            <div className={myaccountstyles.wrapper} >
                 <div className={myaccountstyles.sidebarWrap}>
                     <div className={myaccountstyles.sideContentWrap}>
                         <h4>Profile</h4>
                         <h4>Posts</h4>
                         <h4>Gallery</h4>
-                        <h4 className={myaccountstyles.todo}>ToDo</h4>
+                        <h4>ToDo</h4>
                     </div>
                 </div>
                 <div className={myaccountstyles.contentwrap}>
                     <div className={myaccountstyles.headingWrap}>
                         <h3>Profile</h3>
                         <div className={myaccountstyles.namewrap}>
-                            <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="example" />
-                            <h4>Clementine Bauch</h4> 
+                            <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"  alt="example" />
+                            <h4>Clementine Bauch </h4> 
                         </div>
                     </div>
                     <div className={myaccountstyles.profile_address_wrapper}>

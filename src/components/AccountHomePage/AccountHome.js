@@ -7,6 +7,8 @@ import { Switch, Route, Link } from "react-router-dom";
 export function AccountHome () {
 
  const [data, setData] = useState([]);
+
+ 
     useEffect(() => {
         fetch("https://panorbit.in/api/users.json",{
         })
@@ -22,11 +24,10 @@ export function AccountHome () {
             <div className={accountstyles.contentWrapper}>
                 <h2>Select an account</h2>
                 <div className={accountstyles.accountWrapper}>
-                    {data.map((item, index) => 
-                        <div key={index} className={accountstyles.cardwrap} 
-                         >
+                    {data.map((item, id) => 
+                        <div key={id} className={accountstyles.cardwrap}>
                             <img src={item.profilepicture} alt="example" />
-                            <Link to="/my_account" >
+                            <Link to={`/my_account/${item.id}`}>
                             <h3>{item.name}</h3>
                             </Link>
                         </div>
@@ -43,7 +44,7 @@ export default function Routes() {
         <>
         <Switch>
                 <Route path="/" exact component={AccountHome} />
-                <Route path="/my_account" component={MyAccount} />
+                <Route path="/my_account/:id" component={MyAccount} />
         </Switch>
         </>
     )
